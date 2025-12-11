@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Data files (optional: don't upload raw data)
+Online Retail.xlsx
+
+# VS Code settings
+.vscode/
