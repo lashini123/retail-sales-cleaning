@@ -145,17 +145,7 @@ python sales_cleaning.py
 
 You only do this once. VS Code will remember it.
 
----
 
-## ⭐ Folder Structure
-
-```
-project-folder/
-│
-├── venv/                  ← virtual environment
-├── sales_cleaning.py      ← your main script
-└── README.md              ← this file
-```
 
 ---
 
