@@ -1,3 +1,63 @@
+## ⭐ First Time Setup (Run Once Per Project)
+
+Run these in the **VS Code terminal**:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install pandas openpyxl
+python sales_cleaning.py
+```
+
+---
+
+## ⭐ Every Day After (When Returning to Work)
+
+Open VS Code → Open this project → Open terminal → Run:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+python sales_cleaning.py
+```
+
+---
+
+## ⭐ Selecting the Python Interpreter in VS Code (One-Time Click)
+
+1. Look at the **bottom-right** corner of VS Code
+2. Click on the Python version
+3. Choose this interpreter:
+
+```
+.\venv\Scripts\python.exe
+```
+
+You only do this once. VS Code will remember it.
+
+---
+
+## ⭐ Folder Structure
+
+```
+project-folder/
+│
+├── venv/                  ← virtual environment
+├── sales_cleaning.py      ← your main script
+└── README.md              ← this file
+```
+
+---
+
+## ⭐ Notes
+
+* Always make sure `(venv)` appears in the terminal before running your script.
+* Never reinstall pandas unless you delete the venv.
+
+---
+
+# 🎉 That’s it — simple and clean!
+
+
 # 📊 Retail Sales Data Cleaning & Analysis (Python, Pandas)
 
 This project performs **end-to-end cleaning and exploratory analysis** on a real-world retail transactions dataset (Online Retail Dataset – UCI Repository).
