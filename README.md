@@ -55,9 +55,9 @@ Created new columns to enable deeper analysis:
 
 ---
 
-## 📈 **Analysis Highlights**
+##  **Analysis Highlights**
 
-### **📊 Monthly Sales Trend (Top Months)**
+### ** Monthly Sales Trend (Top Months)**
 
 ```text
 2010-12 → 821,452  
