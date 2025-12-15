@@ -300,6 +300,8 @@ RetailProject/
 └── venv/
 ```
 errors
+
+
 But the Python code needs the full path including the Excel file, which is:
 C:\Users\Asus\Desktop\Data science\Online Retail.xlsx
 So your Python code should be:
