@@ -299,6 +299,62 @@ RetailProject/
 │── README.md
 └── venv/
 ```
+errors
+But the Python code needs the full path including the Excel file, which is:
+C:\Users\Asus\Desktop\Data science\Online Retail.xlsx
+So your Python code should be:
+file_path = r"C:\Users\Asus\Desktop\Data science\Online Retail.xlsx"
+df = pd.read_excel(file_path)
+print(df.head())
+
+This error means:
+👉 Your virtual environment is active ((venv)), but pandas is NOT installed inside it.
+Even if you installed pandas before, it must be installed inside this venv.
+Let’s fix it in 10 seconds.
+________________________________________
+✅ STEP 1 — Make sure venv is activated
+Your terminal already shows:
+(venv) PS C:\Users\Asus\Desktop\Data science>
+✔ Good — venv is active.
+If (venv) disappears, run:
+venv\Scripts\activate
+________________________________________
+✅ STEP 2 — Install pandas + openpyxl inside the venv
+Run this inside your terminal:
+pip install pandas openpyxl
+You should see messages like:
+Installing collected packages: pandas, openpyxl, numpy, etc.
+Successfully installed ...
+________________________________________
+✅ STEP 3 — Verify installation
+Run:
+pip show pandas
+If pandas is installed, you’ll see version info.
+________________________________________
+✅ STEP 4 — Run your script again
+python sales_cleaning.py
+________________________________________
+Great — the installation worked, but I can see the issue clearly:
+👉 Pandas was installed in your global Python (Python310)
+👉 But your virtual environment (venv) is not using Python310, it was created from another interpreter.
+So even though pandas is installed globally, it's not inside your venv.
+That’s why Python says:
+ModuleNotFoundError: No module named 'pandas'
+Let’s fix it properly.
+________________________________________
+⭐ FIX: Install pandas into the venv’s own Python
+Run this EXACT command:
+.\venv\Scripts\python.exe -m pip install pandas openpyxl
+This forces the virtual environment’s Python to install pandas.
+________________________________________
+⭐ Verify it worked
+Run:
+.\venv\Scripts\python.exe -m pip show pandas
+If you see version info → success.
+________________________________________
+⭐ Then run your script using the venv’s Python:
+.\venv\Scripts\python.exe sales_cleaning.py
+This guarantees that you're using the Python interpreter inside the venv.
 
 
 
